@@ -27,10 +27,10 @@ steps:
     verbose: false
 
 - script: './node_nodules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot --output Tailspin.SpaceGame.Web/wwwroot'
-  display: 'Compile Sass assets'
+  displayName: 'Compile Sass assets'
 
 - task: gulp@1
-  display: 'Run gulp tasks'
+  displayName: 'Run gulp tasks'
 
 - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
   displayName: 'Write build info'
